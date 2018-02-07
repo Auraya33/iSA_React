@@ -1,0 +1,39 @@
+body {
+    background: white;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.header{
+    background-color: steelblue;
+}
+
+.header h3 {
+    font-family: Arial sans-serif;
+    text-align: center;
+}
+
+.header h1 {
+    text-align: center;
+    margin: 0;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+    background-color: darkslategray;
+    width: 100%;
+    height: 35px;
+}
+footer p {
+    font-size: 15px;
+    font-family: Georgia sans-serif;
+    color: whitesmoke;
+    padding: 20px;
+
+}
+
+table {
+    border: black 2px solid;
+}
