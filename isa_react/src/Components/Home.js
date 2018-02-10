@@ -1,8 +1,6 @@
 import React from 'react';
-import {BrowserRouter, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import players from '../Data/players';
-
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import {
     Table,
@@ -16,8 +14,7 @@ import {
 
 export default () => {
     const playerIds = Object.keys(players);
-    return <BrowserRouter>
-        <MuiThemeProvider>
+    return (
             <React.Fragment>
                 <Table>
                     <TableHeader>
@@ -37,9 +34,7 @@ export default () => {
                     </TableBody>
                 </Table>
             </React.Fragment>
-        </MuiThemeProvider>
-    </BrowserRouter>
-
+    )
 };
 
 

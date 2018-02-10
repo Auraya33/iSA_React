@@ -21,7 +21,6 @@ export default class extends React.Component {
                     <Route path="/" exact component={Home}/>
                     <Route path="/player/:id" component={Player}/>
                     <Footer/>
-
                 </React.Fragment>
             </MuiThemeProvider>
         </BrowserRouter>
