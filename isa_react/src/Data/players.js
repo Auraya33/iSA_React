@@ -1,4 +1,4 @@
-export default [
+export default  [
     {id: 1, nickname: 'Jankos', level: 45, about: 'Polish jungle player'},
     {id: 2, nickname: 'Vander', level: 55, about: 'Polish support player'},
     {id: 3, nickname: 'Yellowstar', level: 57, about: 'One of best european support players'},

@@ -13,7 +13,6 @@ import {
 
 
 export default () => {
-    const playerIds = Object.keys(players);
     return (
             <React.Fragment>
                 <Table>
@@ -24,11 +23,11 @@ export default () => {
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        {playerIds.map(id =>
-                            <TableRow key={id}>
+                        {players.map(player =>
+                            <TableRow>
                                 <TableRowColumn>
-                                     <Link to={`/player/${id}`}>{players[id].nickname}</Link></TableRowColumn>
-                                <TableRowColumn>{players[id].level}</TableRowColumn>
+                                     <Link to={`/player/${player.id -1}`}>{player.nickname}</Link></TableRowColumn>
+                                <TableRowColumn>{player.level}</TableRowColumn>
                             </TableRow>
                         )}
                     </TableBody>
