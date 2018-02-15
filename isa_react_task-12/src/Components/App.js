@@ -3,6 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import PropTypes from 'prop-types';
 
 import Todo from './Todo';
+import AddTodo from './AddTodo';
 
 export default class extends React.Component {
 
@@ -18,7 +19,6 @@ export default class extends React.Component {
             {name: 'Clean mirror', isFinished: false},
             {name: 'Empty trash', isFinished: true}
         ],
-
     };
 
     render() {
@@ -26,10 +26,11 @@ export default class extends React.Component {
             <React.Fragment>
                 {this.state.todos.map(todo =>
                     <Todo name={todo.name} isFinished={todo.isFinished}/>
-
                 )}
+                <AddTodo/>
 
             </React.Fragment>
         </MuiThemeProvider>
     }
+
 }
