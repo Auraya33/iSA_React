@@ -2,13 +2,23 @@ import React from 'react';
 
 class AddReact extends React.Component {
 
-    state = { inputText };
+    state = {
+        currentInputValue: ''
+    };
+
+    onInputChange = (inputText) => {
+        this.setState({
+            currentInputValue: inputText.target.value
+        })
+    };
 
     render() {
-        const { onAdded } = this.props;
+        return ( <React.Fragment>
+        <input type="text" onChange={this.onInputChange}/>
+        <button>Add</button>
+            </React.Fragment>
 
-        return <input type="text" onChange={(inputText) => {` ${inputText.target.value}`}}/>
-
+        )
     }
 }
 

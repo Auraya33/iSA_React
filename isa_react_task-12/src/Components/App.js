@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import Todo from './Todo';
 import AddTodo from './AddTodo';
 
+import '../css/style.css';
+
 export default class extends React.Component {
 
 
