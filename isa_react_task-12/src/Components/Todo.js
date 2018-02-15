@@ -4,13 +4,9 @@ import PropTypes from 'prop-types';
 class Todo extends React.Component {
 
     render() {
-        const { name } = this.props;
+        const { name, isFinished } = this.props;
 
-        return (
-            <ol>
-                <li>{name}</li>
-            </ol>
-        )
+        return  <li>{name} {isFinished}</li>
     }
 }
 

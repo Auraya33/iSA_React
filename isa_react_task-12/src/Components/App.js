@@ -6,23 +6,30 @@ import Todo from './Todo';
 
 export default class extends React.Component {
 
+
     state = {
-        1: {name: 'Do laundry', isFinished: false},
-        2: {name: 'Cook meal', isFinished: true},
-        4: {name: 'Clean dishes', isFinished: true},
-        3: {name: 'Set bed', isFinished: false},
-        5: {name: 'Vaccum floors', isFinished: false},
-        6: {name: 'Take dog for walk ', isFinished: true},
-        7: {name: 'Clean mirror', isFinished: false},
-        8: {name: 'Empty trash', isFinished: true}
+        todos: [
+            {name: 'Do laundry', isFinished: false},
+            {name: 'Cook meal', isFinished: true},
+            {name: 'Clean dishes', isFinished: true},
+            {name: 'Set bed', isFinished: false},
+            {name: 'Vaccum floors', isFinished: false},
+            {name: 'Take dog for walk ', isFinished: true},
+            {name: 'Clean mirror', isFinished: false},
+            {name: 'Empty trash', isFinished: true}
+        ],
+
     };
 
     render() {
         return <MuiThemeProvider>
             <React.Fragment>
-                <Todo name={this.state.name}/>
+                {this.state.todos.map(todo =>
+                    <Todo name={todo.name} isFinished={todo.isFinished}/>
+
+                )}
 
             </React.Fragment>
         </MuiThemeProvider>
-        }
-            }
+    }
+}
