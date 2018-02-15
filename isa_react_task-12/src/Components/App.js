@@ -1,6 +1,8 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProfider';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import PropTypes from 'prop-types';
+
+import Todo from './Todo';
 
 export default class extends React.Component {
 
@@ -15,6 +17,12 @@ export default class extends React.Component {
         8: {name: 'Empty trash', isFinished: true}
     };
 
+    render() {
+        return <MuiThemeProvider>
+            <React.Fragment>
+                <Todo name={this.state.name}/>
 
-    
-}
+            </React.Fragment>
+        </MuiThemeProvider>
+        }
+            }
