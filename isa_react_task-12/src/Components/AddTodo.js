@@ -1,8 +1,10 @@
 import React from 'react';
 
 class AddReact extends React.Component {
+
     state = {
-        currentInputValue: ''
+        currentInputValue: '',
+        todos: []
     };
 
     onInputChange = (inputText) => {
@@ -13,12 +15,15 @@ class AddReact extends React.Component {
         console.log(this.state.currentInputValue);
     };
 
-    render() {
-        const { onAdded } = this.props;
+    onButtonClicked = () => {
+        this.props.onInputChange(this.state.currentInputValue);
+    };
 
-        return ( <React.Fragment>
-        <input type="text" onChange={this.onInputChange}/>
-        <button onClick={ onAdded }>Add</button>
+    render() {
+
+        return (<React.Fragment>
+                <input type="text" onChange={this.onInputChange}/>
+                <button onClick={this.onButtonClicked}>Add</button>
             </React.Fragment>
         )
     }
