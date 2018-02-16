@@ -2,16 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 
+
 class Todo extends React.Component {
     render() {
         const { name, isFinished } = this.props;
+        let className = 'todo';
 
-        if (isFinished.props === true) {
+        if (isFinished === true) {
+            className += ' todo-done' }
 
-            document.querySelectorAll('li').style.textDecoration = 'line-through';
-        }
-
-        return  <li>{name} {isFinished}</li>
+        return <li className={ className }>{name} {isFinished}</li>
     }
 }
 

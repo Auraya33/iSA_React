@@ -1,3 +1,7 @@
 .todo-done {
     text-decoration: line-through;
 }
+
+.todo {
+    font-size: 16px;
+}
