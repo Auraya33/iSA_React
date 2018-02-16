@@ -28,7 +28,7 @@ export default class extends React.Component {
                 {this.state.todos.map(todo =>
                     <Todo name={todo.name} isFinished={todo.isFinished}/>
                 )}
-                <AddTodo/>
+                <AddTodo />
 
             </React.Fragment>
         </MuiThemeProvider>

@@ -16,7 +16,7 @@ class Todo extends React.Component {
 }
 
 Todo.protoTypes = {
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
 };
 
 export default Todo;

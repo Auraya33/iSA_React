@@ -1,7 +1,6 @@
 import React from 'react';
 
 class AddReact extends React.Component {
-
     state = {
         currentInputValue: ''
     };
@@ -9,15 +8,18 @@ class AddReact extends React.Component {
     onInputChange = (inputText) => {
         this.setState({
             currentInputValue: inputText.target.value
-        })
+
+        });
+        console.log(this.state.currentInputValue);
     };
 
     render() {
+        const { onAdded } = this.props;
+
         return ( <React.Fragment>
         <input type="text" onChange={this.onInputChange}/>
-        <button>Add</button>
+        <button onClick={ onAdded }>Add</button>
             </React.Fragment>
-
         )
     }
 }
