@@ -30,7 +30,8 @@ export default class extends React.Component {
         return <MuiThemeProvider>
             <React.Fragment>
                 {this.state.todos.map(todo =>
-                    <Todo name={todo.name} isFinished={todo.isFinished}/>
+                    <Todo name={todo.name}
+                          isFinished={todo.isFinished}/>
                 )}
                 <AddTodo onInputChange={this.updateTodoList}/>
 
