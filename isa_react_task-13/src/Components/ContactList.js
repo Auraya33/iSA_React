@@ -14,10 +14,10 @@ handleRemoveClick = event => {
                 {contacts.map(contact => {
                     return (
                         <li key={contact.id}>
-                            <strong>{contact.fullName}</strong>
+                            <strong>{contact.fullName}</strong><br/>
                             {contact.phoneNumber}
-                            {contact.email}
-                            {contact.category}
+                            {contact.email}<br/>
+                            {contact.category}<br/>
                             <button data-contact-id={contact.id}
                                     onClick={this.handleRemoveClick}>
                                 Remove

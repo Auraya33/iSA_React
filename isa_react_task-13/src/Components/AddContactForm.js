@@ -27,6 +27,7 @@ class AddContactForm extends Component {
             <input
                 name={fieldName}
                 value={this.state[fieldName]}
+                placeholder={fieldName}
                 onChange={this.handleChange}
             />
         )

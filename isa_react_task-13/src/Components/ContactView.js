@@ -5,8 +5,13 @@ import AddContactForm from "./AddContactForm";
 class ContactView extends Component {
     state = {
         contacts: [
-            {id: '1', fullName: 'Kasia Nagel', phoneNumber: 999222111, email: 'email@gmail.com', category: 'family'}
-        ]
+            {
+                id: '1',
+                fullName: 'Kasia Nagel',
+                phoneNumber: `999222111, `,
+                email: 'email@gmail.com',
+                category: `[family]`
+            }]
     };
 
     removeContact = contactId => {
@@ -22,9 +27,10 @@ class ContactView extends Component {
             contacts: this.state.contacts.concat({
                 id: Date.now().toString(32),
                 fullName: contactFullName,
-                phoneNumber: contactPhoneNumber,
+                phoneNumber:contactPhoneNumber + ', ',
                 email: contactEmail,
                 category: contactCategory
+
             })
         })
     };
@@ -32,13 +38,13 @@ class ContactView extends Component {
     render() {
         return (
             <React.Fragment>
-                <h1>Contact List</h1>
+                <h1>Contact List Form</h1>
+                <AddContactForm
+                    addContact={this.addContact}
+                />
                 <ContactList
                 contacts={this.state.contacts}
                 removeContact={this.removeContact}
-                />
-                <AddContactForm
-                    addContact={this.addContact}
                 />
             </React.Fragment>
         )
