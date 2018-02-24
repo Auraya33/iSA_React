@@ -22,6 +22,7 @@ class ContactView extends Component {
         })
     };
 
+    
     addContact = ({ contactFullName, contactPhoneNumber, contactEmail, contactCategory}) => {
         this.setState({
             contacts: this.state.contacts.concat({
