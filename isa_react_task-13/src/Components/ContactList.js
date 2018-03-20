@@ -15,8 +15,8 @@ class ContactList extends Component {
                 {contacts.map(contact => {
                     return (
                         <li key={contact.id}>
-                            <strong>{contact.fullName}</strong><br/>
-                            {contact.phoneNumber}
+                            <strong>{contact.name}</strong><br/>
+                            {contact.number}
                             {contact.email}<br/>
                             {contact.category}<br/>
                             <button data-contact-id={contact.id}
@@ -38,7 +38,7 @@ export default connect(
     dispatch => ({
         removeContact: removedContactId =>
             dispatch({
-                type: 'REMOVE_PROFILE',
+                type: 'REMOVE_CONTACT',
                 removedContactId
             })
     })

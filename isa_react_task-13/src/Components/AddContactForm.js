@@ -49,6 +49,24 @@ class AddContactForm extends Component {
 }
 
 
-export default connect(state => ({
+export default connect(
+    state => ({
+    contacts: state.data
+}),
+    dispatch => ({
+        addContact: ({
+            contactFullName,
+            contactPhoneNumber,
+            contactEmail,
+            contactCategory
+    }) =>
+    dispatch ({
+        type: 'ADD_CONTACT',
+        contactFullName,
+        contactPhoneNumber,
+        contactEmail,
+        contactCategory
+       })
+    })
+    )(AddContactForm)
 
-}))

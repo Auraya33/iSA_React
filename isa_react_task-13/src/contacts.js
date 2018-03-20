@@ -19,7 +19,7 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,
                 data: state.data.filter(
-                    profile => profile.id !== action.removedProfileId
+                    profile => profile.id !== action.removedContactId
                 )
             }
         default:
