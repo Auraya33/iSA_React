@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 const initialState = {
     contactFullName: '',
@@ -48,4 +49,6 @@ class AddContactForm extends Component {
 }
 
 
-export default AddContactForm
+export default connect(state => ({
+
+}))

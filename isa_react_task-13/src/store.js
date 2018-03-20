@@ -1,18 +1,10 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
+import contacts from '../src/contacts'
 
-const initialState = {
-    value: 0
-}
-const reducer = (state = initialState, action = {}) => {
-    switch (action.type) {
-        case '':
-            return {
 
-            }
-        default:
-            return state
-    }
-}
+const reducer = combineReducers({
+    contacts
+})
 
 const store = createStore(
     reducer,
@@ -20,7 +12,7 @@ const store = createStore(
 )
 
 store.subscribe(() => {
-    console.log('zmiana', store.getState())
+    console.log('change', store.getState())
 })
 
 

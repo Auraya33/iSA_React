@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
+import { connect } from 'react-redux'
 
 class ContactList extends Component {
 
-handleRemoveClick = event => {
-    const contactId = event.target.dataset.contactId;
-    this.props.removeContact(contactId)
-};
+    handleRemoveClick = event => {
+        const contactId = event.target.dataset.contactId;
+        this.props.removeContact(contactId)
+    };
 
     render() {
         const {contacts} = this.props;
@@ -30,4 +31,15 @@ handleRemoveClick = event => {
     }
 }
 
-export default ContactList
+export default connect(
+    state => ({
+        contacts: state.contacts.data
+    }),
+    dispatch => ({
+        removeContact: removedContactId =>
+            dispatch({
+                type: 'REMOVE_PROFILE',
+                removedContactId
+            })
+    })
+)(ContactList)
